@@ -1,0 +1,6 @@
+.. toctree::
+   快速入门/MMEdu简介.md
+   快速入门/MMEdu安装.md
+   快速入门/体验MMEdu.md
+   快速入门/训练AI模型.md
+   快速入门/部署AI应用.md
