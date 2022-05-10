@@ -31,9 +31,9 @@ put_text('欢迎你，' + s);
 
 运行这段代码后，浏览器会自动打开一个本地的网址，出现这样的界面。
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/2493078/1650379473302-ad990eb0-63fe-4858-80ae-f9a21a229e33.png)
+![avatar](../../build/html/_static/pywebio图1.png)
 
-​                                                                        图1 初始网页界面
+图1 初始网页界面
 
 输入姓名再点击“提交”按钮，网页上就会输出相应的文字。这种基于Web页面的“交互”，体验比黑乎乎的终端界面要好很多。
 
@@ -60,9 +60,9 @@ PyWebIO支持常见的网页控件。既然PyWebI的定位就是输入和输出�
 
 尤其值得称赞的是，PyWebIO还支持MarkDown语法。除了输入输出，PyWebIO还支持布局、协程、数据可视化等特性。通过和其他库的配合，可以呈现更加酷炫的网页效果，如图2所示。
 
-![img](https://cdn.nlark.com/yuque/0/2022/png/2493078/1650379764579-26c89f1b-109b-4fa9-9e24-6b1c9510fc52.png)
+![avatar](../../build/html/_static/pywebio图2.png)
 
-​                                           图2 PyWebIO结合第三方库制作的数据可视化效果
+图2 PyWebIO结合第三方库制作的数据可视化效果
 
 如果需要了解更多关于PyWebIO库的资源，请访问github或者官方文档。
 

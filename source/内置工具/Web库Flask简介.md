@@ -55,7 +55,7 @@ def hello_world():
 
 这种做法和很多智能终端的工作原理是一样的。如小度、天猫精灵和小爱音箱等，自己都没有处理数据的能力，都要靠网络传送数据到服务器，然后才能正确和用户交流。目前中小学的很多AI应用，都是借助百度AI开放平台的。
 
+![avatar](../../build/html/_static/flask简介图1.jpeg)
 
 
-![img](https://cdn.nlark.com/yuque/0/2022/jpeg/2493078/1650769897170-21fafa73-3b56-46ad-9f99-f12753c63f76.jpeg)
 

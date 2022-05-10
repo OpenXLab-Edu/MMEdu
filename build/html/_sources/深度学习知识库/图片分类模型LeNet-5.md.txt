@@ -22,9 +22,7 @@ LeNet是一种用于手写体字符识别的非常高效的卷积神经网络，
 
 LeNet的网络结构示意图如下所示：
 
-
-
-![img](http://cuijiahua.com/wp-content/uploads/2018/01/dl_3_4.jpg)
+![avatar](../../build/html/_static/LeNet5.jpg)
 
 
 
