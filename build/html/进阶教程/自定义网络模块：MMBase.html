@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>自定义网络模块：MMBase &mdash; MMEdu  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <title>自定义网络模块：MMBase &mdash; MMEdu  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="MMEdu的数据集格式详解" href="MMEdu的数据集格式详解.html" />
-    <link rel="prev" title="物体检测模块：Detection" href="物体检测模块：Detection.html" /> 
+    <link rel="next" title="MMEdu的数据集格式详解" href="MMEdu%E7%9A%84%E6%95%B0%E6%8D%AE%E9%9B%86%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3.html" />
+    <link rel="prev" title="物体检测模块：Detection" href="%E7%89%A9%E4%BD%93%E6%A3%80%E6%B5%8B%E6%A8%A1%E5%9D%97%EF%BC%9ADetection.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -35,58 +37,58 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">关于MMEdu</span></p>
+              <p class="caption" role="heading"><span class="caption-text">关于MMEdu</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../关于MMEdu/MMEdu的故事.html">MMEdu的故事</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../关于MMEdu/开发和维护团队.html">开发和维护团队</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../关于MMEdu/版本更新记录.html">版本更新记录</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../关于MMEdu/MMEdu大事记.html">MMEdu大事记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E5%85%B3%E4%BA%8EMMEdu/MMEdu%E7%9A%84%E6%95%85%E4%BA%8B.html">MMEdu的故事</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E5%85%B3%E4%BA%8EMMEdu/%E5%BC%80%E5%8F%91%E5%92%8C%E7%BB%B4%E6%8A%A4%E5%9B%A2%E9%98%9F.html">开发和维护团队</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E5%85%B3%E4%BA%8EMMEdu/%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E8%AE%B0%E5%BD%95.html">版本更新记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E5%85%B3%E4%BA%8EMMEdu/MMEdu%E5%A4%A7%E4%BA%8B%E8%AE%B0.html">MMEdu大事记</a></li>
 </ul>
-<p class="caption"><span class="caption-text">快速入门</span></p>
+<p class="caption" role="heading"><span class="caption-text">快速入门</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../快速入门/MMEdu简介.html">MMEdu简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../快速入门/MMEdu安装.html">MMEdu安装</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../快速入门/体验MMEdu.html">体验MMEdu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../快速入门/训练AI模型.html">训练AI模型</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../快速入门/部署AI应用.html">部署AI应用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/MMEdu%E7%AE%80%E4%BB%8B.html">MMEdu简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/MMEdu%E5%AE%89%E8%A3%85.html">MMEdu安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/%E4%BD%93%E9%AA%8CMMEdu.html">体验MMEdu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/%E8%AE%AD%E7%BB%83AI%E6%A8%A1%E5%9E%8B.html">训练AI模型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/%E9%83%A8%E7%BD%B2AI%E5%BA%94%E7%94%A8.html">部署AI应用</a></li>
 </ul>
-<p class="caption"><span class="caption-text">进阶教程</span></p>
+<p class="caption" role="heading"><span class="caption-text">进阶教程</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="MMEdu的目录详解.html">MMEdu的目录详解</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MMEdu的模块概述.html">MMEdu的模块概述</a></li>
-<li class="toctree-l1"><a class="reference internal" href="图片分类模块：Classification.html">图片分类模块：Classification</a></li>
-<li class="toctree-l1"><a class="reference internal" href="物体检测模块：Detection.html">物体检测模块：Detection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MMEdu%E7%9A%84%E7%9B%AE%E5%BD%95%E8%AF%A6%E8%A7%A3.html">MMEdu的目录详解</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MMEdu%E7%9A%84%E6%A8%A1%E5%9D%97%E6%A6%82%E8%BF%B0.html">MMEdu的模块概述</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%9B%BE%E7%89%87%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9D%97%EF%BC%9AClassification.html">图片分类模块：Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E7%89%A9%E4%BD%93%E6%A3%80%E6%B5%8B%E6%A8%A1%E5%9D%97%EF%BC%9ADetection.html">物体检测模块：Detection</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">自定义网络模块：MMBase</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MMEdu的数据集格式详解.html">MMEdu的数据集格式详解</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MMEdu%E7%9A%84%E6%95%B0%E6%8D%AE%E9%9B%86%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3.html">MMEdu的数据集格式详解</a></li>
 </ul>
-<p class="caption"><span class="caption-text">内置工具</span></p>
+<p class="caption" role="heading"><span class="caption-text">内置工具</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../内置工具/数据集标注工具.html">数据集标注工具</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../内置工具/Web库PyWebIO简介.html">Web库PyWebIO简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../内置工具/MQTT库siot简介.html">MQTT库siot简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../内置工具/开源硬件库pinpong简介.html">开源硬件库pinpong简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../内置工具/Web库Flask简介.html">Web库Flask简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E5%86%85%E7%BD%AE%E5%B7%A5%E5%85%B7/%E6%95%B0%E6%8D%AE%E9%9B%86%E6%A0%87%E6%B3%A8%E5%B7%A5%E5%85%B7.html">数据集标注工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E5%86%85%E7%BD%AE%E5%B7%A5%E5%85%B7/Web%E5%BA%93PyWebIO%E7%AE%80%E4%BB%8B.html">Web库PyWebIO简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E5%86%85%E7%BD%AE%E5%B7%A5%E5%85%B7/MQTT%E5%BA%93siot%E7%AE%80%E4%BB%8B.html">MQTT库siot简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E5%86%85%E7%BD%AE%E5%B7%A5%E5%85%B7/%E5%BC%80%E6%BA%90%E7%A1%AC%E4%BB%B6%E5%BA%93pinpong%E7%AE%80%E4%BB%8B.html">开源硬件库pinpong简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E5%86%85%E7%BD%AE%E5%B7%A5%E5%85%B7/Web%E5%BA%93Flask%E7%AE%80%E4%BB%8B.html">Web库Flask简介</a></li>
 </ul>
-<p class="caption"><span class="caption-text">在线课程和创意项目</span></p>
+<p class="caption" role="heading"><span class="caption-text">在线课程和创意项目</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../在线课程和创意项目/项目：设计“石头剪刀布”陪玩机器人.html">项目：设计“石头剪刀布”陪玩机器人</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../在线课程和创意项目/课程：神经网络和计算机视觉实验.html">课程：神经网络和计算机视觉实验</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../在线课程和创意项目/课程：走进万物智联的世界.html">课程：走进万物智联的世界</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../在线课程和创意项目/项目：电路符号识别小助手.html">项目：电路符号识别小助手</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E5%9C%A8%E7%BA%BF%E8%AF%BE%E7%A8%8B%E5%92%8C%E5%88%9B%E6%84%8F%E9%A1%B9%E7%9B%AE/%E9%A1%B9%E7%9B%AE%EF%BC%9A%E8%AE%BE%E8%AE%A1%E2%80%9C%E7%9F%B3%E5%A4%B4%E5%89%AA%E5%88%80%E5%B8%83%E2%80%9D%E9%99%AA%E7%8E%A9%E6%9C%BA%E5%99%A8%E4%BA%BA.html">项目：设计“石头剪刀布”陪玩机器人</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E5%9C%A8%E7%BA%BF%E8%AF%BE%E7%A8%8B%E5%92%8C%E5%88%9B%E6%84%8F%E9%A1%B9%E7%9B%AE/%E8%AF%BE%E7%A8%8B%EF%BC%9A%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%92%8C%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%AE%9E%E9%AA%8C.html">课程：神经网络和计算机视觉实验</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E5%9C%A8%E7%BA%BF%E8%AF%BE%E7%A8%8B%E5%92%8C%E5%88%9B%E6%84%8F%E9%A1%B9%E7%9B%AE/%E8%AF%BE%E7%A8%8B%EF%BC%9A%E8%B5%B0%E8%BF%9B%E4%B8%87%E7%89%A9%E6%99%BA%E8%81%94%E7%9A%84%E4%B8%96%E7%95%8C.html">课程：走进万物智联的世界</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E5%9C%A8%E7%BA%BF%E8%AF%BE%E7%A8%8B%E5%92%8C%E5%88%9B%E6%84%8F%E9%A1%B9%E7%9B%AE/%E9%A1%B9%E7%9B%AE%EF%BC%9A%E7%94%B5%E8%B7%AF%E7%AC%A6%E5%8F%B7%E8%AF%86%E5%88%AB%E5%B0%8F%E5%8A%A9%E6%89%8B.html">项目：电路符号识别小助手</a></li>
 </ul>
-<p class="caption"><span class="caption-text">资源获取和问题解答</span></p>
+<p class="caption" role="heading"><span class="caption-text">资源获取和问题解答</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../资源获取和问题解答/常见问题解答.html">常见问题解答</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../资源获取和问题解答/预训练模型和权重文件下载.html">预训练模型和权重文件下载</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../资源获取和问题解答/数据集下载.html">数据集下载</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../资源获取和问题解答/GPU版本的手动安装.html">GPU版本的手动安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E8%B5%84%E6%BA%90%E8%8E%B7%E5%8F%96%E5%92%8C%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94.html">常见问题解答</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E8%B5%84%E6%BA%90%E8%8E%B7%E5%8F%96%E5%92%8C%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/%E9%A2%84%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%E5%92%8C%E6%9D%83%E9%87%8D%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD.html">预训练模型和权重文件下载</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E8%B5%84%E6%BA%90%E8%8E%B7%E5%8F%96%E5%92%8C%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/%E6%95%B0%E6%8D%AE%E9%9B%86%E4%B8%8B%E8%BD%BD.html">数据集下载</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E8%B5%84%E6%BA%90%E8%8E%B7%E5%8F%96%E5%92%8C%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/GPU%E7%89%88%E6%9C%AC%E7%9A%84%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85.html">GPU版本的手动安装</a></li>
 </ul>
-<p class="caption"><span class="caption-text">深度学习知识库</span></p>
+<p class="caption" role="heading"><span class="caption-text">深度学习知识库</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../深度学习知识库/深度学习训练参数详解.html">深度学习训练参数详解</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../深度学习知识库/经典数据集介绍.html">经典数据集介绍</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../深度学习知识库/图片分类模型MobileNet.html">图片分类模型MobileNet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../深度学习知识库/图片分类模型LeNet-5.html">图片分类模型LeNet-5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E5%BA%93/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%AE%AD%E7%BB%83%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3.html">深度学习训练参数详解</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E5%BA%93/%E7%BB%8F%E5%85%B8%E6%95%B0%E6%8D%AE%E9%9B%86%E4%BB%8B%E7%BB%8D.html">经典数据集介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E5%BA%93/%E5%9B%BE%E7%89%87%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9E%8BMobileNet.html">图片分类模型MobileNet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E5%BA%93/%E5%9B%BE%E7%89%87%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9E%8BLeNet-5.html">图片分类模型LeNet-5</a></li>
 </ul>
 
         </div>
@@ -103,7 +105,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../进阶教程.html">&lt;no title&gt;</a> &raquo;</li>
+          <li><a href="../%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B.html">&lt;no title&gt;</a> &raquo;</li>
       <li>自定义网络模块：MMBase</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/进阶教程/自定义网络模块：MMBase.md.txt" rel="nofollow"> View page source</a>
@@ -114,16 +116,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="mmbase">
-<h1>自定义网络模块：MMBase<a class="headerlink" href="#mmbase" title="Permalink to this headline">¶</a></h1>
-</div>
+  <section id="mmbase">
+<h1>自定义网络模块：MMBase<a class="headerlink" href="#mmbase" title="Permalink to this headline"></a></h1>
+</section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="物体检测模块：Detection.html" class="btn btn-neutral float-left" title="物体检测模块：Detection" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="MMEdu的数据集格式详解.html" class="btn btn-neutral float-right" title="MMEdu的数据集格式详解" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="%E7%89%A9%E4%BD%93%E6%A3%80%E6%B5%8B%E6%A8%A1%E5%9D%97%EF%BC%9ADetection.html" class="btn btn-neutral float-left" title="物体检测模块：Detection" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="MMEdu%E7%9A%84%E6%95%B0%E6%8D%AE%E9%9B%86%E6%A0%BC%E5%BC%8F%E8%AF%A6%E8%A7%A3.html" class="btn btn-neutral float-right" title="MMEdu的数据集格式详解" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
