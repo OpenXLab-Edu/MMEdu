@@ -197,3 +197,4 @@ pip list
 ![avatar](../../build/html/_static/MMEDU安装图7.png)
 
  图7 安装列表
+

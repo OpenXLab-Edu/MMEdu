@@ -120,7 +120,7 @@
           <li><a href="../%E5%86%85%E7%BD%AE%E5%B7%A5%E5%85%B7.html">&lt;no title&gt;</a> &raquo;</li>
       <li>Web库Flask简介</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/内置工具/Web库Flask简介.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/内置工具/Web库Flask简介.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -133,7 +133,7 @@
 <section id="id1">
 <h2>1.简介<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
 <p>Flask是一个轻量级的可定制框架，使用Python语言编写，较其他同类型框架更为灵活、轻便、安全且容易上手，其强大的插件库可以让用户实现个性化的网站定制，开发出功能强大的网站。</p>
-<p>文档地址：https://dormousehole.readthedocs.io/en/latest/quickstart.html</p>
+<p>文档地址：<a class="reference external" href="https://dormousehole.readthedocs.io/en/latest/quickstart.html">https://dormousehole.readthedocs.io/en/latest/quickstart.html</a></p>
 </section>
 <section id="id2">
 <h2>2.安装<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h2>
@@ -160,9 +160,12 @@
 <p>代码是什么意思呢？</p>
 <ul class="simple">
 <li><p>首先我们导入了 Flask 类。该类的实例将会成为我们的 WSGI 应用。</p></li>
-<li><p>接着我们创建一个该类的实例。第一个参数是应用模块或者包的名称。 <strong>name</strong> 是一个适用于大多数情况的快捷方式。有了这个参数， Flask 才能知道在哪里可以找到模板和静态文件等东西。</p></li>
+<li><p>接着我们创建一个该类的实例。第一个参数是应用模块或者包的名称。
+<strong>name</strong> 是一个适用于大多数情况的快捷方式。有了这个参数， Flask
+才能知道在哪里可以找到模板和静态文件等东西。</p></li>
 <li><p>然后我们使用 route() 装饰器来告诉 Flask 触发函数 的 URL 。</p></li>
-<li><p>函数返回需要在用户浏览器中显示的信息。默认的内容类型是 HTML ，因此字符串中的 HTML 会被浏览器渲染。</p></li>
+<li><p>函数返回需要在用户浏览器中显示的信息。默认的内容类型是 HTML
+，因此字符串中的 HTML 会被浏览器渲染。</p></li>
 </ul>
 </section>
 <section id="id4">
@@ -176,7 +179,12 @@
 <h2>4. 借助Flask部署智能应用<a class="headerlink" href="#flask" title="Permalink to this headline"></a></h2>
 <p>因为算力的限制，在很多应用场景中，负责采集数据的终端往往没有办法直接部署MMEdu或者其他的人工智能应用框架，也就是说没有办法在终端上直接推理。那么，先在服务器（或者一台算力较好的PC机）部署一个AI应用，提供WebAPI接口，让终端发送数据到这个服务器，服务器推理后返回推理结果。</p>
 <p>这种做法和很多智能终端的工作原理是一样的。如小度、天猫精灵和小爱音箱等，自己都没有处理数据的能力，都要靠网络传送数据到服务器，然后才能正确和用户交流。目前中小学的很多AI应用，都是借助百度AI开放平台的。</p>
-<p><img alt="avatar" src="../build/html/_static/flask%E7%AE%80%E4%BB%8B%E5%9B%BE1.jpeg" /></p>
+<figure class="align-default" id="id5">
+<img alt="avatar" src="../_images/flask简介图1.jpeg" />
+<figcaption>
+<p><span class="caption-text">avatar</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 </section>
 

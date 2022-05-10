@@ -115,7 +115,7 @@
           <li><a href="../%E5%86%85%E7%BD%AE%E5%B7%A5%E5%85%B7.html">&lt;no title&gt;</a> &raquo;</li>
       <li>Web库PyWebIO简介</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/内置工具/Web库PyWebIO简介.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/内置工具/Web库PyWebIO简介.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -128,7 +128,7 @@
 <section id="id1">
 <h2>1.简介<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
 <p>顾名思义，PyWebIO库是一个基于Web方式来实现输入输出（I/O）的Python库。这是北京航空航天大学在读研究生王伟民同学用业余时间写的库。目前在GitHbu上获得了高达1.6K的Star。它允许用户像编写终端脚本一样来编写Web应用或基于浏览器的GUI应用，而无需具备HTML和JS的相关知识。</p>
-<p>Github地址：https://github.com/wang0618/PyWebIO</p>
+<p>Github地址：<a class="reference external" href="https://github.com/wang0618/PyWebIO">https://github.com/wang0618/PyWebIO</a></p>
 </section>
 <section id="id2">
 <h2>2. 安装<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h2>
@@ -150,30 +150,55 @@
 </pre></div>
 </div>
 <p>运行这段代码后，浏览器会自动打开一个本地的网址，出现这样的界面。</p>
-<p><img alt="avatar" src="../build/html/_static/pywebio%E5%9B%BE1.png" /></p>
+<figure class="align-default" id="id4">
+<img alt="avatar" src="../_images/pywebio图1.png" />
+<figcaption>
+<p><span class="caption-text">avatar</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>图1 初始网页界面</p>
 <p>输入姓名再点击“提交”按钮，网页上就会输出相应的文字。这种基于Web页面的“交互”，体验比黑乎乎的终端界面要好很多。</p>
 <p>PyWebIO支持常见的网页控件。既然PyWebI的定位就是输入和输出，那么也可以将网页控件分为这两类，部分控件的说明如表1所示。</p>
 <p>表1 PyWebIO支持的网页控件（部分）</p>
-<p>| 类别     | 控件                                                         | 代码范例                   |
-| ——– | ———————————————————— | ————————– |
-| 输入     | 文本                                                         | input(”What’s your name?”) |
-| 下拉选择 | select(’Select’, [’A’, ‘B’])                                 |                            |
-| 多选     | checkbox(”Checkbox”, options=[’Check me’])                   |                            |
-| 单选     | radio(”Radio”, options=[’A’, ‘B’, ‘C’])                      |                            |
-| 多行文本 | textarea(’Text’, placeholder=’Some text’)                    |                            |
-| 文件上传 | file_upload(”Select a file:”)                                |                            |
-| 输出     | 文本                                                         | put_text(”Hello world!”);  |
-| 表格     | put_table([[’Product’, ‘Price’],[’Apple’, ‘$5.5’], [’Banner’, ‘$7’],]); |                            |
-| 图像     | put_image(open(’python-logo.png’, ‘rb’).read());             |                            |
-| 通知消息 | toast(’Awesome PyWebIO!!’);                                  |                            |
-| 文件     | put_file(’hello_word.txt’, b’hello word!’);                  |                            |
-| Html代码 | put_html(’E = mc<sup>2</sup>’);                              |                            |</p>
-<p>尤其值得称赞的是，PyWebIO还支持MarkDown语法。除了输入输出，PyWebIO还支持布局、协程、数据可视化等特性。通过和其他库的配合，可以呈现更加酷炫的网页效果，如图2所示。</p>
-<p><img alt="avatar" src="../build/html/_static/pywebio%E5%9B%BE2.png" /></p>
+<table><tr><th><p>类别</p>
+</th><th><p>控件</p>
+</th><th><p>代码范例</p>
+</th></tr ><tr ><td rowspan="6"><p>输入</p>
+</td><td><p>文本</p>
+</td><td><p>input(“What’s your name?”)</p>
+</td></tr><tr><td><p>下拉选择</p>
+</td><td><p>select(‘Select’, [‘A’, ‘B’])</p>
+</td></tr><tr><td><p>多选</p>
+</td><td><p>checkbox(“Checkbox”, options=[‘Check me’])</p>
+</td></tr><tr><td><p>单选</p>
+</td><td><p>radio(“Radio”, options=[‘A’, ‘B’, ‘C’])</p>
+</td></tr><tr><td><p>多行文本</p>
+</td><td><p>textarea(‘Text’, placeholder=‘Some text’)</p>
+</td></tr><tr><td><p>文件上传</p>
+</td><td><p>file_upload(“Select a file:”)</p>
+</td></tr><tr ><td rowspan="6"><p>输出</p>
+</td><td><p>文本</p>
+</td><td><p>put_text(“Hello world!”);</p>
+</td></tr><tr><td><p>表格</p>
+</td><td><p>put_table([[‘Product’, ‘Price’],[‘Apple’, ‘$5.5’], [‘Banner’, ‘$7’],]);</p>
+</td></tr><tr><td><p>图像</p>
+</td><td><p>put_image(open(‘python-logo.png’, ‘rb’).read());</p>
+</td></tr><tr><td><p>通知消息</p>
+</td><td><p>toast(‘Awesome PyWebIO!!’);</p>
+</td></tr><tr><td><p>文件</p>
+</td><td><p>put_file(‘hello_word.txt’, b’hello word!’);</p>
+</td></tr><tr><td><p>Html代码</p>
+</td><td><p>put_html(‘E = mc2’);</p>
+</td></tr></table><p>尤其值得称赞的是，PyWebIO还支持MarkDown语法。除了输入输出，PyWebIO还支持布局、协程、数据可视化等特性。通过和其他库的配合，可以呈现更加酷炫的网页效果，如图2所示。</p>
+<figure class="align-default" id="id5">
+<img alt="avatar" src="../_images/pywebio图2.png" />
+<figcaption>
+<p><span class="caption-text">avatar</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>图2 PyWebIO结合第三方库制作的数据可视化效果</p>
 <p>如果需要了解更多关于PyWebIO库的资源，请访问github或者官方文档。</p>
-<p>文档地址：https://pywebio.readthedocs.io/</p>
+<p>文档地址：<a class="reference external" href="https://pywebio.readthedocs.io/">https://pywebio.readthedocs.io/</a></p>
 </section>
 <section id="pywebioai">
 <h2>4. 借助PyWebIO部署简易AI应用<a class="headerlink" href="#pywebioai" title="Permalink to this headline"></a></h2>
