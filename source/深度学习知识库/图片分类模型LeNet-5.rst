@@ -18,9 +18,7 @@ LeNet是一种用于手写体字符识别的非常高效的卷积神经网络，
 LeNet的网络结构示意图如下所示：
 
 .. figure:: ../../build/html/_static/LeNet5.jpg
-   :alt: avatar
 
-   avatar
 
 即输入手写字符图片经过C1，C2，C3这3个卷积神经网络后，再经过两层全连接神经网络，输出最终的分类结果。
 

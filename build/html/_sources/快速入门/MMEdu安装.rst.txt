@@ -9,18 +9,12 @@ MMEdu安装
 第一步：下载MMEdu最新版文件，并解压到本地，文件夹目录结构如下图所示。
 
 .. figure:: ../../build/html/_static/MMEDU安装图1.png
-   :alt: avatar
-
-   avatar
 
 图1 目录结构图
 
 第二步：运行根目录的“steup.bat”文件，完成环境部署（如下图所示）。
 
 .. figure:: ../../build/html/_static/MMEDU安装图2.png
-   :alt: avatar
-
-   avatar
 
 图2 环境部署界面
 
@@ -31,9 +25,6 @@ MMEdu安装
 Pyzo是一款好用的Python轻量级IDE。其最突出的两个特点便是是简洁性和交互性。打开根目录下的pyzo.exe文件快捷方式即可打开pyzo，其指向“Tools”中的“pyzo.exe”。使用Pyzo打开“demo”文件夹中的py文件，如“cls_demo.py”，点击“运行”的“将文件作为脚本运行”即可运行代码，界面如下图所示。
 
 .. figure:: ../../build/html/_static/MMEDU安装图3.png
-   :alt: avatar
-
-   avatar
 
 图3 Pyzo界面图
 
@@ -47,9 +38,6 @@ Notebook是基于网页的用于交互计算的应用程序。其可被应用于
 使用常用工具栏对代码进行操作，如“运行”，可以在单元格中编写文本或者代码（如下图中写了\ ``print("hello")``\ 代码的位置），执行代码的结果也将会在每个单元下方呈现。可以逐个运行单元格，每点击一次，仅运行一个单元格。单元格左侧[*]内的星号变为数字，表示该单元格运行完成。此时可打开“demo”文件夹中的ipynb文件，如“cls_notebook.ipynb”。
 
 .. figure:: ../../build/html/_static/MMEDU安装图5.png
-   :alt: avatar
-
-   avatar
 
 图5 jupyter运行界面
 
@@ -65,9 +53,6 @@ Notebook是基于网页的用于交互计算的应用程序。其可被应用于
 PyCharm环境路径配置如下图所示。
 
 .. figure:: ../../build/html/_static/MMEDU安装图6.png
-   :alt: avatar
-
-   avatar
 
 图6 PyCharm的环境路径配置界面
 
@@ -224,9 +209,6 @@ system Python3.9”默认使用python的版本。
    pip list
 
 .. figure:: ../../build/html/_static/MMEDU安装图7.png
-   :alt: avatar
-
-   avatar
 
 图7 安装列表
 

@@ -36,9 +36,6 @@ PyWebIO提供了一系列命令式的交互函数来在浏览器上获取用户�
 运行这段代码后，浏览器会自动打开一个本地的网址，出现这样的界面。
 
 .. figure:: ../../build/html/_static/pywebio图1.png
-   :alt: avatar
-
-   avatar
 
 图1 初始网页界面
 
@@ -50,15 +47,19 @@ PyWebIO支持常见的网页控件。既然PyWebI的定位就是输入和输出�
 
 .. raw:: html
 
-   <table>
+   <table class="docutils align-default">
 
 .. raw:: html
 
-   <tr>
+   <thead>
 
 .. raw:: html
 
-   <th>
+   <tr class="row-odd">
+
+.. raw:: html
+
+   <th class="head">
 
 类别
 
@@ -68,7 +69,7 @@ PyWebIO支持常见的网页控件。既然PyWebI的定位就是输入和输出�
 
 .. raw:: html
 
-   <th>
+   <th class="head">
 
 控件
 
@@ -78,7 +79,7 @@ PyWebIO支持常见的网页控件。既然PyWebI的定位就是输入和输出�
 
 .. raw:: html
 
-   <th>
+   <th class="head">
 
 代码范例
 
@@ -92,7 +93,15 @@ PyWebIO支持常见的网页控件。既然PyWebI的定位就是输入和输出�
 
 .. raw:: html
 
-   <tr >
+   </thead>
+
+.. raw:: html
+
+   <tbody>
+
+.. raw:: html
+
+   <tr class="row-even">
 
 .. raw:: html
 
@@ -130,7 +139,7 @@ input(“What’s your name?”)
 
 .. raw:: html
 
-   <tr>
+   <tr class="row-odd">
 
 .. raw:: html
 
@@ -158,7 +167,7 @@ select(‘Select’, [‘A’, ‘B’])
 
 .. raw:: html
 
-   <tr>
+   <tr class="row-even">
 
 .. raw:: html
 
@@ -186,7 +195,7 @@ checkbox(“Checkbox”, options=[‘Check me’])
 
 .. raw:: html
 
-   <tr>
+   <tr class="row-odd">
 
 .. raw:: html
 
@@ -214,7 +223,7 @@ radio(“Radio”, options=[‘A’, ‘B’, ‘C’])
 
 .. raw:: html
 
-   <tr>
+   <tr class="row-even">
 
 .. raw:: html
 
@@ -242,7 +251,7 @@ textarea(‘Text’, placeholder=‘Some text’)
 
 .. raw:: html
 
-   <tr>
+   <tr class="row-odd">
 
 .. raw:: html
 
@@ -270,7 +279,7 @@ file_upload(“Select a file:”)
 
 .. raw:: html
 
-   <tr >
+   <tr class="row-even">
 
 .. raw:: html
 
@@ -308,7 +317,7 @@ put_text(“Hello world!”);
 
 .. raw:: html
 
-   <tr>
+   <tr class="row-odd">
 
 .. raw:: html
 
@@ -336,7 +345,7 @@ put_table([[‘Product’, ‘Price’],[‘Apple’, ‘$5.5’], [‘Banner’
 
 .. raw:: html
 
-   <tr>
+   <tr class="row-even">
 
 .. raw:: html
 
@@ -364,7 +373,7 @@ put_image(open(‘python-logo.png’, ‘rb’).read());
 
 .. raw:: html
 
-   <tr>
+   <tr class="row-odd">
 
 .. raw:: html
 
@@ -392,7 +401,7 @@ toast(‘Awesome PyWebIO!!’);
 
 .. raw:: html
 
-   <tr>
+   <tr class="row-even">
 
 .. raw:: html
 
@@ -420,7 +429,7 @@ put_file(‘hello_word.txt’, b’hello word!’);
 
 .. raw:: html
 
-   <tr>
+   <tr class="row-odd">
 
 .. raw:: html
 
@@ -448,14 +457,15 @@ put_html(‘E = mc2’);
 
 .. raw:: html
 
+   </tbody>
+
+.. raw:: html
+
    </table>
 
 尤其值得称赞的是，PyWebIO还支持MarkDown语法。除了输入输出，PyWebIO还支持布局、协程、数据可视化等特性。通过和其他库的配合，可以呈现更加酷炫的网页效果，如图2所示。
 
 .. figure:: ../../build/html/_static/pywebio图2.png
-   :alt: avatar
-
-   avatar
 
 图2 PyWebIO结合第三方库制作的数据可视化效果
 

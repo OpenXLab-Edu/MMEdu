@@ -41,63 +41,70 @@ PyWebIO支持常见的网页控件。既然PyWebI的定位就是输入和输出�
 
 表1 PyWebIO支持的网页控件（部分）
 
-<table>
-	<tr>
-	    <th>类别</th>
-	    <th>控件</th>
-	    <th>代码范例</th>  
-	</tr >
-	<tr >
-	    <td rowspan="6">输入</td>
-	    <td>文本</td>
-	    <td>input("What's your name?")</td>
-	</tr>
-	<tr>
-	    <td>下拉选择</td>
-	    <td>select('Select', ['A', 'B'])</td>
-	</tr>
-	<tr>
-	    <td>多选</td>
-	    <td>checkbox("Checkbox", options=['Check me'])</td>
-	</tr>
-    <tr>
-	    <td>单选</td>
-	    <td>radio("Radio", options=['A', 'B', 'C'])</td>
-	</tr>
-    <tr>
-	    <td>多行文本</td>
-	    <td>textarea('Text', placeholder='Some text')</td>
-	</tr>
-    <tr>
-	    <td>文件上传</td>
-	    <td>file_upload("Select a file:")</td>
-	</tr>
-	<tr >
-	    <td rowspan="6">输出</td>
-	    <td>文本</td>
-	    <td>put_text("Hello world!");</td>
-	</tr>
-	<tr>
-	    <td>表格</td>
-	    <td>put_table([['Product', 'Price'],['Apple', '$5.5'], ['Banner', '$7'],]);</td>
-	</tr>
-	<tr>
-	    <td>图像</td>
-	    <td>put_image(open('python-logo.png', 'rb').read());</td>
-	</tr>
-    <tr>
-	    <td>通知消息</td>
-	    <td>toast('Awesome PyWebIO!!');</td>
-	</tr>
-    <tr>
-	    <td>文件</td>
-	    <td>put_file('hello_word.txt', b'hello word!');</td>
-	</tr>
-    <tr>
-	    <td>Html代码</td>
-	    <td>put_html('E = mc<sup>2</sup>');</td>
-	</tr>
+<table class="docutils align-default">
+    <thead>
+        <tr class="row-odd">
+            <th class="head">类别</th>
+            <th class="head">控件</th>
+            <th class="head">代码范例</th>  
+		</tr >
+    </thead>
+    <tbody>
+        <tr class="row-even">
+            <td rowspan="6">输入</td>
+            <td>文本</td>
+            <td>input("What's your name?")</td>
+        </tr>
+        <tr class="row-odd">
+            <td>下拉选择</td>
+            <td>select('Select', ['A', 'B'])</td>
+        </tr>
+        <tr class="row-even">
+            <td>多选</td>
+            <td>checkbox("Checkbox", options=['Check me'])</td>
+        </tr>
+        <tr class="row-odd">
+            <td>单选</td>
+            <td>radio("Radio", options=['A', 'B', 'C'])</td>
+        </tr>
+        <tr class="row-even">
+            <td>多行文本</td>
+            <td>textarea('Text', placeholder='Some text')</td>
+        </tr>
+        <tr class="row-odd">
+            <td>文件上传</td>
+            <td>file_upload("Select a file:")</td>
+        </tr>
+        <tr class="row-even">
+            <td rowspan="6">输出</td>
+            <td>文本</td>
+            <td>put_text("Hello world!");</td>
+        </tr>
+        <tr class="row-odd">
+            <td>表格</td>
+            <td>put_table([['Product', 'Price'],['Apple', '$5.5'], ['Banner', '$7'],]);</td>
+        </tr>
+        <tr class="row-even">
+            <td>图像</td>
+            <td>put_image(open('python-logo.png', 'rb').read());</td>
+        </tr>
+        <tr class="row-odd">
+            <td>通知消息</td>
+            <td>toast('Awesome PyWebIO!!');</td>
+        </tr>
+        <tr class="row-even">
+            <td>文件</td>
+            <td>put_file('hello_word.txt', b'hello word!');</td>
+        </tr>
+        <tr class="row-odd">
+            <td>Html代码</td>
+            <td>put_html('E = mc<sup>2</sup>');</td>
+        </tr>
+    </tbody>
 </table>
+
+
+
 
 
 
