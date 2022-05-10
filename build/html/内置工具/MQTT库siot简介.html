@@ -65,7 +65,18 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="%E6%95%B0%E6%8D%AE%E9%9B%86%E6%A0%87%E6%B3%A8%E5%B7%A5%E5%85%B7.html">数据集标注工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Web%E5%BA%93PyWebIO%E7%AE%80%E4%BB%8B.html">Web库PyWebIO简介</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">MQTT库siot简介</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">MQTT库siot简介</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">1.简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">2.安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">3.代码范例</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">3.1 发送消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">3.2 订阅消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">3.3 订阅多条消息</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#siot">4. 借助siot部署智联网应用</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="%E5%BC%80%E6%BA%90%E7%A1%AC%E4%BB%B6%E5%BA%93pinpong%E7%AE%80%E4%BB%8B.html">开源硬件库pinpong简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Web%E5%BA%93Flask%E7%AE%80%E4%BB%8B.html">Web库Flask简介</a></li>
 </ul>
@@ -89,6 +100,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E5%BA%93/%E7%BB%8F%E5%85%B8%E6%95%B0%E6%8D%AE%E9%9B%86%E4%BB%8B%E7%BB%8D.html">经典数据集介绍</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E5%BA%93/%E5%9B%BE%E7%89%87%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9E%8BMobileNet.html">图片分类模型MobileNet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E5%BA%93/%E5%9B%BE%E7%89%87%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9E%8BLeNet-5.html">图片分类模型LeNet-5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E5%BA%93/%E5%9B%BE%E7%89%87%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9E%8BLeNet-5.html#lenet">LeNet说明文档</a></li>
 </ul>
 
         </div>
@@ -118,6 +130,104 @@
              
   <section id="mqttsiot">
 <h1>MQTT库siot简介<a class="headerlink" href="#mqttsiot" title="Permalink to this headline"></a></h1>
+<section id="id1">
+<h2>1.简介<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
+<p>MQTT是最常用的物联网协议之一。但是，MQTT的官方Python库明显不好用，前面要定义一个类，代码冗长，对初学者不够友好。siot是虚谷物联团队基于MQTT paho写的一个Python库，为了让初学者能够写出更加简洁、优雅的Python代码。</p>
+<p>需要强调的是，siot库同时支持MicroPython，语法完全一致。</p>
+<p>GitHub地址：https://github.com/vvlink/SIoT/tree/master/siot-lib</p>
+</section>
+<section id="id2">
+<h2>2.安装<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h2>
+<p>可以使用使用pip命令安装siot库，如：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">siot</span>
+</pre></div>
+</div>
+<p>注：MMEdu中已经内置了siot库。</p>
+</section>
+<section id="id3">
+<h2>3.代码范例<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h2>
+<p>下面的代码以MQTT服务器软件SIoT为例。SIoT是一个一键部署的MQTT服务器，广泛应用于中小学的物联网教学中。</p>
+<section id="id4">
+<h3>3.1 发送消息<a class="headerlink" href="#id4" title="Permalink to this headline"></a></h3>
+<div class="highlight-plain notranslate"><div class="highlight"><pre><span></span>import siot
+import time
+
+SERVER = &quot;127.0.0.1&quot;            #MQTT服务器IP
+CLIENT_ID = &quot;&quot;                  #在SIoT上，CLIENT_ID可以留空
+IOT_pubTopic  = &#39;xzr/001&#39;       #“topic”为“项目名称/设备名称”
+IOT_UserName =&#39;siot&#39;            #用户名
+IOT_PassWord =&#39;dfrobot&#39;         #密码
+
+siot.init(CLIENT_ID, SERVER, user=IOT_UserName, password=IOT_PassWord)
+siot.connect()
+siot.loop()
+
+tick = 0
+while True:
+  siot.publish(IOT_pubTopic, &quot;value %d&quot;%tick)
+  time.sleep(1)           #隔1秒发送一次
+  tick = tick+1
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h3>3.2 订阅消息<a class="headerlink" href="#id5" title="Permalink to this headline"></a></h3>
+<div class="highlight-plain notranslate"><div class="highlight"><pre><span></span>import siot
+import time
+
+SERVER = &quot;127.0.0.1&quot;        #MQTT服务器IP
+CLIENT_ID = &quot;&quot;              #在SIoT上，CLIENT_ID可以留空
+IOT_pubTopic  = &#39;xzr/001&#39;   #“topic”为“项目名称/设备名称”
+IOT_UserName =&#39;siot&#39;        #用户名
+IOT_PassWord =&#39;dfrobot&#39;     #密码
+
+def sub_cb(client, userdata, msg):
+  print(&quot;\nTopic:&quot; + str(msg.topic) + &quot; Message:&quot; + str(msg.payload))
+  # msg.payload中是消息的内容，类型是bytes，需要用解码。
+  s=msg.payload.decode()
+  print(s)
+
+siot.init(CLIENT_ID, SERVER, user=IOT_UserName, password=IOT_PassWord)
+siot.connect()
+siot.subscribe(IOT_pubTopic, sub_cb)
+siot.loop()
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h3>3.3 订阅多条消息<a class="headerlink" href="#id6" title="Permalink to this headline"></a></h3>
+<div class="highlight-plain notranslate"><div class="highlight"><pre><span></span>import siot
+import time
+
+SERVER = &quot;127.0.0.1&quot;         # MQTT服务器IP
+CLIENT_ID = &quot;&quot;               # 在SIoT上，CLIENT_ID可以留空
+IOT_pubTopic1  = &#39;xzr/001&#39;   # “topic”为“项目名称/设备名称”
+IOT_pubTopic2  = &#39;xzr/002&#39;   # “topic”为“项目名称/设备名称”
+IOT_UserName =&#39;siot&#39;         # 用户名
+IOT_PassWord =&#39;dfrobot&#39;      # 密码
+
+def sub_cb(client, userdata, msg):  # sub_cb函数仍然只有一个，需要在参数msg.topic中对消息加以区分
+  print(&quot;\nTopic:&quot; + str(msg.topic) + &quot; Message:&quot; + str(msg.payload))
+  # msg.payload中是消息的内容，类型是bytes，需要用解码。
+  s=msg.payload.decode()
+  print(s)
+
+siot.init(CLIENT_ID, SERVER, user=IOT_UserName, password=IOT_PassWord)
+siot.connect()
+siot.set_callback(sub_cb)         
+siot.getsubscribe(IOT_pubTopic1)  # 订阅消息1
+siot.getsubscribe(IOT_pubTopic2)  # 订阅消息2
+siot.loop()
+</pre></div>
+</div>
+</section>
+</section>
+<section id="siot">
+<h2>4. 借助siot部署智联网应用<a class="headerlink" href="#siot" title="Permalink to this headline"></a></h2>
+<p>当物联网遇上人工智能，就形成了智联网。当学生训练出一个AI模型，就可以通过物联网设备进行多模态交互。</p>
+<p>1）远程感知。</p>
+<p>2）远程控制。</p>
+</section>
 </section>
 
 

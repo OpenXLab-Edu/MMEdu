@@ -46,7 +46,17 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">快速入门</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">MMEdu简介</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">MMEdu简介</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">1.MMEdu是什么？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mmeduai">2.MMEdu和常见AI框架的比较</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mmeduopencv">1）MMEdu和OpenCV的比较</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mmedumediapipe">2）MMEdu和MediaPipe的比较</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mmedukeras">3）MMEdu和Keras的比较</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mmedufastai">4）MMEdu和FastAI的比较</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="MMEdu%E5%AE%89%E8%A3%85.html">MMEdu安装</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E4%BD%93%E9%AA%8CMMEdu.html">体验MMEdu</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E8%AE%AD%E7%BB%83AI%E6%A8%A1%E5%9E%8B.html">训练AI模型</a></li>
@@ -89,6 +99,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E5%BA%93/%E7%BB%8F%E5%85%B8%E6%95%B0%E6%8D%AE%E9%9B%86%E4%BB%8B%E7%BB%8D.html">经典数据集介绍</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E5%BA%93/%E5%9B%BE%E7%89%87%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9E%8BMobileNet.html">图片分类模型MobileNet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E5%BA%93/%E5%9B%BE%E7%89%87%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9E%8BLeNet-5.html">图片分类模型LeNet-5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E5%BA%93/%E5%9B%BE%E7%89%87%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9E%8BLeNet-5.html#lenet">LeNet说明文档</a></li>
 </ul>
 
         </div>
@@ -118,6 +129,34 @@
              
   <section id="mmedu">
 <h1>MMEdu简介<a class="headerlink" href="#mmedu" title="Permalink to this headline"></a></h1>
+<section id="id1">
+<h2>1.MMEdu是什么？<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
+<p>MMEdu源于国产人工智能视觉（CV）算法集成框架OpenMMLab，是一个“开箱即用”的深度学习开发工具。在继承OpenMMLab强大功能的同时，MMEdu简化了神经网络模型搭建和训练的参数，降低了编程的难度，并实现一键部署编程环境，让初学者通过简洁的代码完成各种SOTA模型（state-of-the-art，指在该项研究任务中目前最好/最先进的模型）的训练，并能够快速搭建出AI应用系统。</p>
+<p>GitHub：https://github.com/OpenXLab-Edu/OpenMMLab-Edu</p>
+<p>国内镜像：https://gitee.com/openxlab-edu/OpenMMLab-Edu</p>
+</section>
+<section id="mmeduai">
+<h2>2.MMEdu和常见AI框架的比较<a class="headerlink" href="#mmeduai" title="Permalink to this headline"></a></h2>
+<section id="mmeduopencv">
+<h3>1）MMEdu和OpenCV的比较<a class="headerlink" href="#mmeduopencv" title="Permalink to this headline"></a></h3>
+<p>OpenCV是一个开源的计算机视觉框架，MMEdu的核心模块MMCV基于OpenCV，二者联系紧密。</p>
+<p>OpenCV虽然是一个很常用的工具，但是普通用户很难在OpenCV的基础上训练自己的分类器。MMEdu则是一个入门门槛很低的深度学习开发工具，借助MMEdu和经典的网络模型，只要拥有一定数量的数据，连小学生都能训练出自己的个性化模型。</p>
+</section>
+<section id="mmedumediapipe">
+<h3>2）MMEdu和MediaPipe的比较<a class="headerlink" href="#mmedumediapipe" title="Permalink to this headline"></a></h3>
+<p>MediaPipe 是一款由 Google Research 开发并开源的多媒体机器学习模型应用框架，支持人脸识别、手势识别和表情识别等，功能非常强大。MMEdu中的MMPose模块关注的重点也是手势识别，功能类似。但MediaPipe是应用框架，而不是开发框架。换句话说，用MediaPipe只能完成其提供的AI识别功能，没办法训练自己的个性化模型。</p>
+</section>
+<section id="mmedukeras">
+<h3>3）MMEdu和Keras的比较<a class="headerlink" href="#mmedukeras" title="Permalink to this headline"></a></h3>
+<p>Keras是一个高层神经网络API，是对Tensorflow、Theano以及CNTK的进一步封装。OpenMMLab和Keras一样，都是为支持快速实验而生。MMEdu则源于OpenMMLab，其语法设计借鉴过Keras。</p>
+<p>相当而言，MMEdu的语法比Keras更加简洁，对中小学生来说也更友好。目前MMEdu的底层框架是Pytorch，而Keras的底层是TensorFlow（虽然也有基于Pytorch的Keras）。</p>
+</section>
+<section id="mmedufastai">
+<h3>4）MMEdu和FastAI的比较<a class="headerlink" href="#mmedufastai" title="Permalink to this headline"></a></h3>
+<p>FastAI（Fast.ai）最受学生欢迎的MOOC课程平台，也是一个PyTorch的顶层框架。和OpenMMLab的做法一样，为了让新手快速实施深度学习，FastAI团队将知名的SOTA模型封装好供学习者使用。</p>
+<p>FastAI同样基于Pytorch，但是和OpenMMLab不同的是，FastAI只能支持GPU。考虑到中小学的基础教育中很难拥有GPU环境，MMEdu特意将OpenMMLab中支持CPU训练的工具筛选出来，供中小学生使用。</p>
+</section>
+</section>
 </section>
 
 

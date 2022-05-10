@@ -67,7 +67,18 @@
 <li class="toctree-l1"><a class="reference internal" href="Web%E5%BA%93PyWebIO%E7%AE%80%E4%BB%8B.html">Web库PyWebIO简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="MQTT%E5%BA%93siot%E7%AE%80%E4%BB%8B.html">MQTT库siot简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="%E5%BC%80%E6%BA%90%E7%A1%AC%E4%BB%B6%E5%BA%93pinpong%E7%AE%80%E4%BB%8B.html">开源硬件库pinpong简介</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Web库Flask简介</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Web库Flask简介</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">1.简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">2.安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">3.代码示例</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#web">3.1 最简Web服务器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">3.2 上传一个文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#webapi">3.3 一个简单的WebAPI</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#flask">4. 借助Flask部署智能应用</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">在线课程和创意项目</span></p>
 <ul>
@@ -89,6 +100,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E5%BA%93/%E7%BB%8F%E5%85%B8%E6%95%B0%E6%8D%AE%E9%9B%86%E4%BB%8B%E7%BB%8D.html">经典数据集介绍</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E5%BA%93/%E5%9B%BE%E7%89%87%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9E%8BMobileNet.html">图片分类模型MobileNet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E5%BA%93/%E5%9B%BE%E7%89%87%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9E%8BLeNet-5.html">图片分类模型LeNet-5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9F%A5%E8%AF%86%E5%BA%93/%E5%9B%BE%E7%89%87%E5%88%86%E7%B1%BB%E6%A8%A1%E5%9E%8BLeNet-5.html#lenet">LeNet说明文档</a></li>
 </ul>
 
         </div>
@@ -118,6 +130,54 @@
              
   <section id="webflask">
 <h1>Web库Flask简介<a class="headerlink" href="#webflask" title="Permalink to this headline"></a></h1>
+<section id="id1">
+<h2>1.简介<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
+<p>Flask是一个轻量级的可定制框架，使用Python语言编写，较其他同类型框架更为灵活、轻便、安全且容易上手，其强大的插件库可以让用户实现个性化的网站定制，开发出功能强大的网站。</p>
+<p>文档地址：https://dormousehole.readthedocs.io/en/latest/quickstart.html</p>
+</section>
+<section id="id2">
+<h2>2.安装<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h2>
+<p>可以使用使用pip命令安装Flask库，如：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">flask</span>
+</pre></div>
+</div>
+<p>注：MMEdu中已经内置了Flask库。</p>
+</section>
+<section id="id3">
+<h2>3.代码示例<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h2>
+<section id="web">
+<h3>3.1 最简Web服务器<a class="headerlink" href="#web" title="Permalink to this headline"></a></h3>
+<p>几行代码就能建一个Web服务器。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">&quot;&lt;p&gt;Hello, World!&lt;/p&gt;&quot;</span>
+</pre></div>
+</div>
+<p>代码是什么意思呢？</p>
+<ul class="simple">
+<li><p>首先我们导入了 Flask 类。该类的实例将会成为我们的 WSGI 应用。</p></li>
+<li><p>接着我们创建一个该类的实例。第一个参数是应用模块或者包的名称。 <strong>name</strong> 是一个适用于大多数情况的快捷方式。有了这个参数， Flask 才能知道在哪里可以找到模板和静态文件等东西。</p></li>
+<li><p>然后我们使用 route() 装饰器来告诉 Flask 触发函数 的 URL 。</p></li>
+<li><p>函数返回需要在用户浏览器中显示的信息。默认的内容类型是 HTML ，因此字符串中的 HTML 会被浏览器渲染。</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3>3.2 上传一个文件<a class="headerlink" href="#id4" title="Permalink to this headline"></a></h3>
+</section>
+<section id="webapi">
+<h3>3.3 一个简单的WebAPI<a class="headerlink" href="#webapi" title="Permalink to this headline"></a></h3>
+</section>
+</section>
+<section id="flask">
+<h2>4. 借助Flask部署智能应用<a class="headerlink" href="#flask" title="Permalink to this headline"></a></h2>
+<p>因为算力的限制，在很多应用场景中，负责采集数据的终端往往没有办法直接部署MMEdu或者其他的人工智能应用框架，也就是说没有办法在终端上直接推理。那么，先在服务器（或者一台算力较好的PC机）部署一个AI应用，提供WebAPI接口，让终端发送数据到这个服务器，服务器推理后返回推理结果。</p>
+<p>这种做法和很多智能终端的工作原理是一样的。如小度、天猫精灵和小爱音箱等，自己都没有处理数据的能力，都要靠网络传送数据到服务器，然后才能正确和用户交流。目前中小学的很多AI应用，都是借助百度AI开放平台的。</p>
+<p><img alt="img" src="https://cdn.nlark.com/yuque/0/2022/jpeg/2493078/1650769897170-21fafa73-3b56-46ad-9f99-f12753c63f76.jpeg" /></p>
+</section>
 </section>
 
 
