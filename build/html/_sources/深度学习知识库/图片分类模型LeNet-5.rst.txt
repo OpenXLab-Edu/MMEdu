@@ -1,8 +1,7 @@
 图片分类模型LeNet-5
 ===================
 
-LeNet说明文档
-=============
+
 
 `Backpropagation Applied to Handwritten Zip Code
 Recognition <https://ieeexplore.ieee.org/document/6795724>`__
