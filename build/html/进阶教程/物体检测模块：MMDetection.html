@@ -270,8 +270,10 @@
 <p><code class="docutils literal notranslate"><span class="pre">weight_decay</span></code>：权值衰减参数，用来调节模型复杂度对损失函数的影响，防止过拟合，默认值为<code class="docutils literal notranslate"><span class="pre">1e-3</span></code>即<code class="docutils literal notranslate"><span class="pre">0.001</span></code>。</p>
 <p><code class="docutils literal notranslate"><span class="pre">checkpoint</span></code>:
 默认为’None’，表示在训练过程中使用初始化权重。如果使用训练得到的模型（或预训练模型），此参数传入一个模型路径，我们的训练将基于传入的模型参数继续训练。</p>
-<p>执行上述代码之后的运行结果如下图
-.. figure:: ../../build/html/_static/image-20220408211213751.png</p>
+<p>执行上述代码之后的运行结果如下图</p>
+<figure class="align-default">
+<img alt="../_images/image-20220408211213751.png" src="../_images/image-20220408211213751.png" />
+</figure>
 <p>而在<code class="docutils literal notranslate"><span class="pre">checkpoints\det_model</span></code>文件夹中我们会发现多了两种文件，一个是<code class="docutils literal notranslate"><span class="pre">None.log.json</span></code>文件，它记录了我们模型在训练过程中的一些参数，比如说学习率<code class="docutils literal notranslate"><span class="pre">lr</span></code>，所用时间<code class="docutils literal notranslate"><span class="pre">time</span></code>，以及损失<code class="docutils literal notranslate"><span class="pre">loss</span></code>等；另一个文件是.pth文件，这个是我们在训练过程中所保存的模型。</p>
 </section>
 <section id="id4">
