@@ -1,7 +1,7 @@
 .. toctree::
    进阶教程/MMEdu的目录详解.md
    进阶教程/MMEdu的模块概述.md
-   进阶教程/图片分类模块：Classification.md
-   进阶教程/物体检测模块：Detection.md
+   进阶教程/图像分类模块：MMClassification.md
+   进阶教程/物体检测模块：MMDetection.md
    进阶教程/自定义网络模块：MMBase.md
    进阶教程/MMEdu的数据集格式详解.md
