@@ -34,9 +34,7 @@ MMEdu中预置了“石头剪刀布”三分类的数据集，并且已经预训
 运行结果如图：
 
 .. figure:: ../../build/html/_static/cls_result.png
-   :alt: image
 
-   image
 
 推理结果图片（带标签的图片）会以原来的文件名称保存在\ ``demo``\ 文件夹下的\ ``cls_result``\ 文件夹下，如果在\ ``demo``\ 下没有发现该文件夹，不用担心，系统会自动建立。当然，您可以自己指定保存文件夹的名称。
 
@@ -108,9 +106,7 @@ MMEdu中预置了“石头剪刀布”三分类的数据集，并且已经预训
 数据集文件结构如下:
 
 .. figure:: ../../build/html/_static/cls_dataset.png
-   :alt: image-dataset
 
-   image-dataset
 
 **hand_gray**\ 文件夹中包含三个图片文件夹，\ ``test_set``,\ ``training_set``,\ ``val_set``\ 分别存储测试集，训练集和验证集的图片；以及三个\ ``txt``\ 文件，\ ``classes.txt``\ 记录该数据集的类别，\ ``test.txt``\ 和\ ``val.txt``\ 分别记录测试集和验证集的图片名。
 
@@ -185,9 +181,7 @@ MMEdu中预置了“石头剪刀布”三分类的数据集，并且已经预训
 执行上述代码之后的运行结果如下图：
 
 .. figure:: ../../build/html/_static/cls_train.png
-   :alt: image-train
 
-   image-train
 
 而在\ ``checkpoints\cls_model``\ 文件夹中我们会发现多了两种文件，一个是\ ``None.log.json``\ 文件，它记录了我们模型在训练过程中的一些参数，比如说学习率\ ``lr``\ ，所用时间\ ``time``\ ，以及损失\ ``loss``\ 等；另一个文件是.pth文件，这个是我们在训练过程中所保存的模型。
 
