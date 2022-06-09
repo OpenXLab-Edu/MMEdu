@@ -10,11 +10,11 @@ OpenMMLab-Edu
 ├── checkpoints
 ├── dataset
 ├── demo
-├── results
-├── tutorials
+├── HowToStart
 ├── tools（github)
 ├── visualization（github)
-├── LICENSE
+├── base.py
+├── README.md
 ├── README.pdf
 ├── setup.bat
 ├── 安装文件说明.ipynb
@@ -40,13 +40,9 @@ OpenMMLab-Edu
 
 存放各个模块的测试程序，如“cls_demo.py”，并提供了测试图片。测试程序包括`py`文件和`ipynb`文件，可支持各种“Python IDE”和“jupyter notebook”运行，可运行根目录的“pyzo.exe”和“run_jupyter.bat”后打开测试程序。
 
-#### results目录：
+#### HowToStart目录：
 
-存放推理结果图，如“cls_result.png”。
-
-#### tutorials目录：
-
-存放各个模块的使用教程文档，如“Classfication_Edu使用教程.md”，文档提供了代码详细说明、参数说明与使用等。同时github上此目录下还存放了OpenMMLab各个模块的开发文档供感兴趣的老师和同学参考，如“OpenMMLab_MMClassification.md”，提供了模块介绍、不同函数使用、深度魔改、添加网络等。
+存放各个模块的使用教程文档，如“MMClassfication使用教程.md”，文档提供了代码详细说明、参数说明与使用等。同时github上此目录下还存放了OpenMMLab各个模块的开发文档供感兴趣的老师和同学参考，如“OpenMMLab_MMClassification.md”，提供了模块介绍、不同函数使用、深度魔改、添加网络等。
 
 #### tools目录：
 
