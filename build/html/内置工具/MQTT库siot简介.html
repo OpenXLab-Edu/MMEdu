@@ -119,7 +119,7 @@
           <li><a href="../%E5%86%85%E7%BD%AE%E5%B7%A5%E5%85%B7.html">&lt;no title&gt;</a> &raquo;</li>
       <li>MQTT库siot简介</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/内置工具/MQTT库siot简介.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/内置工具/MQTT库siot简介.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -131,9 +131,10 @@
 <h1>MQTT库siot简介<a class="headerlink" href="#mqttsiot" title="Permalink to this headline"></a></h1>
 <section id="id1">
 <h2>1.简介<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
-<p>MQTT是最常用的物联网协议之一。但是，MQTT的官方Python库明显不好用，前面要定义一个类，代码冗长，对初学者不够友好。siot是虚谷物联团队基于MQTT paho写的一个Python库，为了让初学者能够写出更加简洁、优雅的Python代码。</p>
+<p>MQTT是最常用的物联网协议之一。但是，MQTT的官方Python库明显不好用，前面要定义一个类，代码冗长，对初学者不够友好。siot是虚谷物联团队基于MQTT
+paho写的一个Python库，为了让初学者能够写出更加简洁、优雅的Python代码。</p>
 <p>需要强调的是，siot库同时支持MicroPython，语法完全一致。</p>
-<p>GitHub地址：https://github.com/vvlink/SIoT/tree/master/siot-lib</p>
+<p>GitHub地址：<a class="reference external" href="https://github.com/vvlink/SIoT/tree/master/siot-lib">https://github.com/vvlink/SIoT/tree/master/siot-lib</a></p>
 </section>
 <section id="id2">
 <h2>2.安装<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h2>
@@ -213,7 +214,7 @@ def sub_cb(client, userdata, msg):  # sub_cb函数仍然只有一个，需要在
 
 siot.init(CLIENT_ID, SERVER, user=IOT_UserName, password=IOT_PassWord)
 siot.connect()
-siot.set_callback(sub_cb)         
+siot.set_callback(sub_cb)
 siot.getsubscribe(IOT_pubTopic1)  # 订阅消息1
 siot.getsubscribe(IOT_pubTopic2)  # 订阅消息2
 siot.loop()
