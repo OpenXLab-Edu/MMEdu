@@ -114,7 +114,7 @@
           <li><a href="../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8.html">&lt;no title&gt;</a> &raquo;</li>
       <li>部署AI应用</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/快速入门/部署AI应用.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/快速入门/部署AI应用.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -131,13 +131,60 @@
 <section id="opencv">
 <h2>2.借助OpenCV识别摄像头画面<a class="headerlink" href="#opencv" title="Permalink to this headline"></a></h2>
 <p>1）代码编写</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+<span class="n">cap</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;一秒钟后开始拍照......&quot;</span><span class="p">)</span>
+<span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ret</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">cap</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s2">&quot;my_hand.jpg&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span> <span class="c1"># 显示1秒（这里单位是毫秒）</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="s2">&quot;my_hand.jpg&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;成功保存 my_hand.jpg&quot;</span><span class="p">)</span>
+<span class="n">cap</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+</pre></div>
+</div>
 <p>2）运行效果</p>
+<figure class="align-default">
+<img alt="../_images/image-20220609170413010.png" src="../_images/image-20220609170413010.png" />
+</figure>
 </section>
 <section id="pywebioweb">
 <h2>3.借助PyWebIO部署Web应用<a class="headerlink" href="#pywebioweb" title="Permalink to this headline"></a></h2>
-<p>1）安装PyWebIO</p>
-<p>2）编写代码</p>
-<p>3）运行效果</p>
+<p>1）编写代码</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">base</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">MMEdu</span> <span class="kn">import</span> <span class="n">MMBase</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">pywebio.input</span> <span class="kn">import</span> <span class="nb">input</span><span class="p">,</span> <span class="n">FLOAT</span><span class="p">,</span><span class="n">input_group</span>
+<span class="kn">from</span> <span class="nn">pywebio.output</span> <span class="kn">import</span> <span class="n">put_text</span>
+
+<span class="c1"># 鸢尾花的分类</span>
+<span class="n">flower</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;iris-setosa&#39;</span><span class="p">,</span><span class="s1">&#39;iris-versicolor&#39;</span><span class="p">,</span><span class="s1">&#39;iris-virginica&#39;</span><span class="p">]</span>
+
+<span class="c1"># 声明模型</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">MMBase</span><span class="p">()</span>
+<span class="c1"># 导入模型</span>
+<span class="n">model</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;./checkpoints/mmbase_net.pkl&#39;</span><span class="p">)</span>
+<span class="n">info</span><span class="o">=</span><span class="n">input_group</span><span class="p">(</span><span class="s1">&#39;请输入要预测的数据&#39;</span><span class="p">,</span> <span class="p">[</span>
+    <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Sepal.Length：&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;x1&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">FLOAT</span><span class="p">),</span>
+    <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Sepal.Width：&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;x2&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">FLOAT</span><span class="p">),</span>
+    <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Petal.Length：&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;x3&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">FLOAT</span><span class="p">),</span>
+    <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Petal.Width：&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;x4&#39;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">FLOAT</span><span class="p">)</span>
+<span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">info</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">info</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="n">put_text</span><span class="p">(</span><span class="s1">&#39;你输入的数据是：</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">inference</span><span class="p">([</span><span class="n">x</span><span class="p">])</span>
+<span class="n">r</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">print_result</span><span class="p">()</span>
+<span class="n">put_text</span><span class="p">(</span><span class="s1">&#39;模型预测的结果是：&#39;</span> <span class="o">+</span> <span class="n">flower</span><span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;预测值&#39;</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;模型预测的结果是：&#39;</span> <span class="o">+</span><span class="n">flower</span><span class="p">[</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;预测值&#39;</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>2）运行效果</p>
+<figure class="align-default">
+<img alt="../_images/web运行效果.png" src="../_images/web运行效果.png" />
+</figure>
 </section>
 <section id="id2">
 <h2>4.连接开源硬件开发智能作品<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h2>
