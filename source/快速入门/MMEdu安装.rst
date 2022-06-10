@@ -9,22 +9,20 @@ MMEdu安装
 第一步：下载MMEdu最新版文件，并解压到本地，文件夹目录结构如下图所示。
 
 .. figure:: ../../build/html/_static/MMEDU安装图1.png
-   :alt: avatar
 
-   avatar
 
 图1 目录结构图
 
-​ 1）下载方式一
+ 1）下载方式一
 
 飞书网盘：
 https://p6bm2if73b.feishu.cn/drive/folder/fldcnfDtXSQx0PDuUGLWZlnVO3g
 
-​ 2）下载方式二
+ 2）下载方式二
 
 百度网盘：https://pan.baidu.com/s/19lu12-T2GF_PiI3hMbtX-g?pwd=2022
 
-​ 提取码：2022
+ 提取码：2022
 
 第二步：运行根目录的“steup.bat”文件，完成环境部署（如下图所示）。
 
