@@ -51,6 +51,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">体验MMEdu</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#demo">1.运行Demo代码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id1">2.体验快速入门课程</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">3.MMEdu的基本代码风格</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="%E8%AE%AD%E7%BB%83AI%E6%A8%A1%E5%9E%8B.html">训练AI模型</a></li>
@@ -125,12 +126,46 @@
 <section id="demo">
 <h2>1.运行Demo代码<a class="headerlink" href="#demo" title="Permalink to this headline"></a></h2>
 <p>1）使用默认IDE</p>
+<p>双击pyzo.exe，打开demo文件夹中的cls_demo.py，运行并体验相关功能，也可以查看其他的Demo文件。详细说明可以在HowToStart文件夹看到。</p>
 <p>2）使用第三方IDE</p>
-<p>thonny</p>
+<p>环境支持任意的Python编辑器，如：Thonny、PyCharm、Sublime等。
+只要配置其Python解释器地址为<code class="docutils literal notranslate"><span class="pre">{你的安装目录}+{\MMEdu\mmedu\python.exe}</span></code>。</p>
 </section>
 <section id="id1">
 <h2>2.体验快速入门课程<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
-<p>3.MMEdu的基本代码风格</p>
+<p>体验入门Demo后，我们还准备了一系列的入门课程供您参考。将在稍晚发布。</p>
+</section>
+<section id="id2">
+<h2>3.MMEdu的基本代码风格<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h2>
+<p>推理：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">MMEdu</span> <span class="kn">import</span> <span class="n">MMClassification</span> <span class="k">as</span> <span class="bp">cls</span>
+<span class="n">img</span> <span class="o">=</span> <span class="s1">&#39;./img.png&#39;</span>
+<span class="n">model</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">backbone</span><span class="o">=</span><span class="s1">&#39;LeNet&#39;</span><span class="p">)</span>
+<span class="n">checkpoint</span> <span class="o">=</span> <span class="s1">&#39;./latest.pth&#39;</span>
+<span class="n">class_path</span> <span class="o">=</span> <span class="s1">&#39;./classes.txt&#39;</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">inference</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">img</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">class_path</span><span class="o">=</span><span class="n">class_path</span><span class="p">,</span><span class="n">checkpoint</span> <span class="o">=</span> <span class="n">checkpoint</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">print_result</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>典型训练：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">MMEdu</span> <span class="kn">import</span> <span class="n">MMClassification</span> <span class="k">as</span> <span class="bp">cls</span>
+<span class="n">model</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">backbone</span><span class="o">=</span><span class="s1">&#39;LeNet&#39;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">num_classes</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">model</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;./dataset&#39;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">save_fold</span> <span class="o">=</span> <span class="s1">&#39;./my_model&#39;</span>
+<span class="n">model</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>继续训练：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">MMEdu</span> <span class="kn">import</span> <span class="n">MMClassification</span> <span class="k">as</span> <span class="bp">cls</span>
+<span class="n">model</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">backbone</span><span class="o">=</span><span class="s1">&#39;LeNet&#39;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">num_classes</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">model</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;./dataset&#39;</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">save_fold</span> <span class="o">=</span> <span class="s1">&#39;./my_model&#39;</span>
+<span class="n">checkpoint</span> <span class="o">=</span> <span class="s1">&#39;./latest.pth&#39;</span>
+<span class="n">model</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">checkpoint</span><span class="o">=</span><span class="n">checkpoint</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
 </section>
 

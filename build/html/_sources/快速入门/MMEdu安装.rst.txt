@@ -29,7 +29,7 @@ https://p6bm2if73b.feishu.cn/drive/folder/fldcnfDtXSQx0PDuUGLWZlnVO3g
 .. figure:: ../../build/html/_static/MMEDU安装图2.png
    :alt: avatar
 
-   avatar
+
 
 图2 环境部署界面
 
@@ -42,7 +42,7 @@ Pyzo是一款好用的Python轻量级IDE。其最突出的两个特点便是是�
 .. figure:: ../../build/html/_static/MMEDU安装图3.png
    :alt: avatar
 
-   avatar
+
 
 图3 Pyzo界面图
 
@@ -58,7 +58,7 @@ Notebook是基于网页的用于交互计算的应用程序。其可被应用于
 .. figure:: ../../build/html/_static/MMEDU安装图5.png
    :alt: avatar
 
-   avatar
+
 
 图5 jupyter运行界面
 
@@ -76,7 +76,7 @@ PyCharm环境路径配置如下图所示。
 .. figure:: ../../build/html/_static/MMEDU安装图6.png
    :alt: avatar
 
-   avatar
+
 
 图6 PyCharm的环境路径配置界面
 
@@ -235,7 +235,7 @@ system Python3.9”默认使用python的版本。
 .. figure:: ../../build/html/_static/MMEDU安装图7.png
    :alt: avatar
 
-   avatar
+
 
 图7 安装列表
 
