@@ -2,8 +2,13 @@
    sphinx-quickstart on Mon May  9 17:34:18 2022.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
+MMEdu帮助文档
 
-Welcome to MMEdu's documentation!
+更多资讯请转至 `XEdu <https://xedu.readthedocs.io>`_ 文档。
+
+
+
+欢迎您使用MMEdu!
 =================================
 
 .. toctree::
